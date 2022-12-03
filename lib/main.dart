@@ -18,7 +18,7 @@ class _MyWidgetState extends State<MyWidget> {
     return MaterialApp(
 
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      home: Home(),
+      home:Home(),
     );
   }
 }

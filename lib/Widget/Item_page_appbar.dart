@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:shopui/Notvication.dart';
-import 'package:shopui/screen.dart/Home_Page.dart';
+import 'package:shopui/screen.dart/Itempage.dart';
 
-class Cart_bar extends StatefulWidget {
-  const Cart_bar({super.key});
+class Item_page_appbar extends StatefulWidget {
+  const Item_page_appbar({super.key});
 
   @override
-  State<Cart_bar> createState() => _Cart_barState();
+  State<Item_page_appbar> createState() => _Item_page_appbarState();
 }
 
-class _Cart_barState extends State<Cart_bar> {
+class _Item_page_appbarState extends State<Item_page_appbar> {
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: EdgeInsets.all(25),
+      padding: EdgeInsets.all(20),
       child: Row(
         children: [
-          GestureDetector(
+          InkWell(
             onTap: () {
-              print("object");
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => Home()),
@@ -36,19 +36,19 @@ class _Cart_barState extends State<Cart_bar> {
           Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text(
-              "Cart",
+              "Product",
               style: TextStyle(
                   color: Color.fromARGB(255, 88, 28, 131),
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 23),
             ),
           ),
           Spacer(),
           Icon(
-            Icons.more_vert,
+            Icons.favorite,
             size: 30,
-            color: Color.fromARGB(255, 88, 28, 131),
-          ),
+            color: Colors.red,
+          )
         ],
       ),
     );

@@ -16,9 +16,11 @@ class CartItemSmples extends StatefulWidget {
 class _CartItemSmplesState extends State<CartItemSmples> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       children: [
-        for (int i = 1; i < 5; i++)
+        for (int i = 1; i <5; i++)
           Container(
             height: 110,
             margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),

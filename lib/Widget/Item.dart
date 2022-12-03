@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:shopui/screen.dart/Itempage.dart';
 
 class Item_widget extends StatefulWidget {
   const Item_widget({super.key});
@@ -51,7 +52,12 @@ class _Item_widgetState extends State<Item_widget> {
                   ],
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Item_page()),
+                    );
+                  },
                   child: Image.asset(
                     "images/$i.png",
                     height: 130,

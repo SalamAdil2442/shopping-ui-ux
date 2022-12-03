@@ -39,6 +39,10 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   badges: ^2.0.3
   get: ^4.6.5
+  clippy_flutter: ^1.1.1
+  flutter_swiper_null_safety: ^1.0.2
+  flutter_rating_bar: ^4.0.1
+  flutter_swiper_null_safety_flutter3: ^3.0.0
 
 dev_dependencies:
   flutter_test:

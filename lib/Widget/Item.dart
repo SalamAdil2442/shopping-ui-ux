@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:shopui/screen.dart/Itempage.dart';
+import 'package:shopui/Widget/Itempage.dart';
 
 class Item_widget extends StatefulWidget {
   const Item_widget({super.key});

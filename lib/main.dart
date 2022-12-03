@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopui/Notvication.dart';
+import 'src/my_app.dart';
 
 void main() {
   runApp(const MyWidget());
@@ -16,9 +17,8 @@ class _MyWidgetState extends State<MyWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      home:Home(),
+      home: Home(),
     );
   }
 }

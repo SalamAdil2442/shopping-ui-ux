@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shopui/Widget/Item_page_appbar.dart';
+import 'package:shopui/Widget/bottom_bar_catagoti.dart';
 
 class Item_page extends StatefulWidget {
   const Item_page({super.key});
@@ -15,6 +16,14 @@ class Item_page extends StatefulWidget {
 }
 
 class _Item_pageState extends State<Item_page> {
+  List<Color> clos = [
+    Colors.red,
+    Colors.orange,
+    Colors.black,
+    Colors.green,
+    Colors.blue,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,8 +51,8 @@ class _Item_pageState extends State<Item_page> {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(
-                        top: 50,
-                        bottom: 20,
+                        top: 48,
+                        bottom: 15,
                       ),
                       child: Row(
                         children: [
@@ -63,6 +72,7 @@ class _Item_pageState extends State<Item_page> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          /// for create star
                           RatingBar.builder(
                             initialRating: 4,
                             minRating: 1,
@@ -76,6 +86,7 @@ class _Item_pageState extends State<Item_page> {
                             ),
                             onRatingUpdate: (index) {},
                           ),
+                          ///////////////////////////////////////////////////////
                           Row(
                             children: [
                               Container(
@@ -121,7 +132,7 @@ class _Item_pageState extends State<Item_page> {
                                   ],
                                 ),
                                 child: Icon(
-                                  CupertinoIcons.minus,
+                                  CupertinoIcons.plus,
                                   size: 18,
                                 ),
                               )
@@ -140,6 +151,90 @@ class _Item_pageState extends State<Item_page> {
                           color: Color.fromARGB(255, 88, 28, 131),
                         ),
                       ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Size",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 88, 28, 131),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Row(
+                            children: [
+                              for (int i = 5; i < 10; i++)
+                                Container(
+                                  height: 30,
+                                  width: 30,
+                                  alignment: Alignment.center,
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(30),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.withOpacity(0.5),
+                                            spreadRadius: 8,
+                                            blurRadius: 3)
+                                      ]),
+                                  child: Text(
+                                    i.toString(),
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Color.fromARGB(255, 88, 28, 131),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Color",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 88, 28, 131),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Row(
+                            children: [
+                              for (int i = 0; i < 5; i++)
+                                Container(
+                                  height: 30,
+                                  width: 30,
+                                  alignment: Alignment.center,
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  decoration: BoxDecoration(
+                                    color: clos[i],
+                                    borderRadius: BorderRadius.circular(30),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 8,
+                                          blurRadius: 3)
+                                    ],
+                                  ),
+                                ),
+                            ],
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -148,6 +243,7 @@ class _Item_pageState extends State<Item_page> {
           ),
         ],
       ),
+      bottomNavigationBar: bottom_bar_catagoti(),
     );
   }
 }

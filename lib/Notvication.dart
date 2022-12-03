@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopui/screen.dart/Account_Page.dart';
 import 'package:shopui/screen.dart/Home_Page.dart';
-import 'package:shopui/screen.dart/Itempage.dart';
+import 'package:shopui/Widget/Itempage.dart';
 
 class Home extends StatefulWidget {
   const Home({Key, key}) : super(key: key);
@@ -39,10 +39,6 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             label: "Home",
             icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            label: "Item page",
-            icon: Icon(Icons.account_circle_outlined),
           ),
           BottomNavigationBarItem(
             label: "My Account",

@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:shopui/Notvication.dart';
-import 'package:shopui/screen.dart/Itempage.dart';
+import 'package:shopui/Widget/Itempage.dart';
 
 class Item_page_appbar extends StatefulWidget {
   const Item_page_appbar({super.key});

@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
-  List _screens = [HomePage(), Item_page(), AccountPage()];
+  List _screens = [HomePage(), AccountPage()];
 
   void _updateIndex(int value) {
     setState(() {
